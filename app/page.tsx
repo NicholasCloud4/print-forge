@@ -1,7 +1,5 @@
-/**
- * Challenge: Create the About page. This page will be
- * accessible at the `/about` route. (e.g. printforge.com/about)
- */
+import Image from "next/image";
+import HeroImage from "@/public/hero-image.png";
 
 export default function Home() {
     return (
@@ -12,7 +10,7 @@ export default function Home() {
                         Your go-to platform for 3D printing files
                     </p>
                     <h1 className="text-4xl font-bold md:text-5xl">
-                        Discover what's possible with 3D Printing
+                        Discover what&apos;s possible with 3D Printing
                     </h1>
                     <p className="text-lg text-gray-600">
                         Join our community of creators and explore a vast
@@ -28,7 +26,12 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-                <img src="hero-image.png" width={350} />
+                <Image
+                    src={HeroImage}
+                    alt="Hero Image"
+                    width={350}
+                    className="w-[350px] h-auto rounded-lg"
+                />
             </section>
         </main>
     );
