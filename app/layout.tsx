@@ -4,6 +4,7 @@ import { Albert_Sans, Montserrat_Alternates } from "next/font/google";
 import PFLogoIcon from "@/public/printforge-logo-icon.svg";
 import PFLogo from "@/public/printforge-logo.svg";
 import Link from "next/link";
+import { RootLayoutProps } from "@/app/types";
 
 const albertSans = Albert_Sans({
     subsets: ["latin"],
@@ -17,21 +18,7 @@ const montserratAlternates = Montserrat_Alternates({
     variable: "--font-montserrat-alternates",
 });
 
-/**
- * Challenge:
- * Update the header code so our users can more easily navigate between routes.
- * For now, send the "3d Models" link to a non-existant "/3d-models" route,
- * we'll work on creating that page soon.
- *
- * For the logo images, you can surround the entire `div` containing the images
- * with the Link component.
- */
-
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
             <body
